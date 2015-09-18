@@ -1382,7 +1382,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var outer = document.createElement('div');
 	    outer.style.width = '50px';
 	    outer.style.height = '50px';
-	    outer.style.overflowY = 'scroll';
 	    outer.style.position = 'absolute';
 	    outer.style.top = '-200px';
 	    outer.style.left = '-200px';
@@ -1395,6 +1394,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    document.body.appendChild(outer);
 
 	    var outerWidth = outer.clientWidth;
+	    outer.style.overflowY = 'scroll';
 	    var innerWidth = inner.clientWidth;
 
 	    document.body.removeChild(outer);
