@@ -967,7 +967,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.props.headerRows.forEach((function (row, index) {
 	      var headerRowStyle = {
 	        position: 'absolute',
-	        top: this.props.height * index,
+	        top: getCombinedHeaderHeights(index),
 	        left: 0,
 	        width: this.props.totalWidth,
 	        overflow: 'hidden'
@@ -1055,10 +1055,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.refs.row.setScrollLeft(scrollLeft);
 	  },
 
+	  getCombinedHeaderHeights: function getCombinedHeaderHeights(until) {
+	    var height = 0;
+	    for (var index = 0; index < until || this.props.headerRows; index++) {
+	      height += this.props.headerRows[index].height || this.props.height;
+	    }
+	    return height;
+	  },
+
 	  getStyle: function getStyle() {
 	    return {
 	      position: 'relative',
-	      height: this.props.height * this.props.headerRows.length,
+	      height: this.getCombinedHeaderHeights(),
 	      overflow: 'hidden'
 	    };
 	  }
