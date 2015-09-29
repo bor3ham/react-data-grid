@@ -967,7 +967,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.props.headerRows.forEach((function (row, index) {
 	      var headerRowStyle = {
 	        position: 'absolute',
-	        top: getCombinedHeaderHeights(index),
+	        top: this.getCombinedHeaderHeights(index),
 	        left: 0,
 	        width: this.props.totalWidth,
 	        overflow: 'hidden'
