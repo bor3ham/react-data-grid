@@ -5083,7 +5083,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (this.props.column.filterable === false) {
 	      return React.createElement('span', null);
 	    } else {
-	      return React.createElement('input', { type: 'text', className: 'form-control input-sm', placeholder: 'Search', value: this.state.filterTerm, onChange: this.handleChange });
+	      var input_key = 'header-filter-' + this.props.column.key;
+	      return React.createElement('input', { key: input_key, type: 'text', className: 'form-control input-sm', placeholder: 'Search', value: this.state.filterTerm, onChange: this.handleChange });
 	    }
 	  }
 	});
