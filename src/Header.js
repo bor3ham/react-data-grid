@@ -153,7 +153,7 @@ var Header = React.createClass({
 
   getCombinedHeaderHeights(until: ?number): number {
     var height = 0;
-    for (var index = 0; index < until || this.props.headerRows; index++) {
+    for (var index = 0; index < until || this.props.headerRows.length; index++) {
       height += this.props.headerRows[index].height || this.props.height;
     }
     return height;

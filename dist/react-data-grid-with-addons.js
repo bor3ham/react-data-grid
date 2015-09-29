@@ -1057,7 +1057,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  getCombinedHeaderHeights: function getCombinedHeaderHeights(until) {
 	    var height = 0;
-	    for (var index = 0; index < until || this.props.headerRows; index++) {
+	    for (var index = 0; index < until || this.props.headerRows.length; index++) {
 	      height += this.props.headerRows[index].height || this.props.height;
 	    }
 	    return height;
