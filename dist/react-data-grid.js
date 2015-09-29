@@ -5064,7 +5064,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  componentDidUpdate: function componentDidUpdate(nextProps) {
 	    var ele = React.findDOMNode(this);
-	    if (ele) ele.focus();
+	    if (ele) ele.getElementsByTagName('input')[0].focus();
 	  },
 
 	  render: function render() {
