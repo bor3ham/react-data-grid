@@ -62,7 +62,7 @@ var Header = React.createClass({
     this.props.headerRows.forEach((function(row, index){
       var headerRowStyle = {
         position: 'absolute',
-        top: this.props.height * index,
+        top: getCombinedHeaderHeights(index),
         left: 0,
         width: this.props.totalWidth,
         overflow : 'hidden'
@@ -151,10 +151,18 @@ var Header = React.createClass({
     this.refs.row.setScrollLeft(scrollLeft);
   },
 
+  getCombinedHeaderHeights(until: ?number): number {
+    var height = 0;
+    for (var index = 0; index < until || this.props.headerRows; index++) {
+      height += this.props.headerRows[index].height || this.props.height;
+    }
+    return height;
+  },
+
   getStyle(): {position: string; height: number} {
     return {
       position: 'relative',
-      height: this.props.height * this.props.headerRows.length,
+      height: this.getCombinedHeaderHeights(),
       overflow : 'hidden'
     };
   },
