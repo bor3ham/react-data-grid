@@ -62,12 +62,12 @@ var columns = [
   filterable: true,
   filterKey: 'filter_issueType'
 },
-{
-  key: 'complete',
-  name: '% Complete',
-  sortable : true,
-  filterable: false
-},
+// {
+//   key: 'complete',
+//   name: '% Complete',
+//   sortable : true,
+//   filterable: false
+// },
 {
   key: 'startDate',
   name: 'Start Date',
