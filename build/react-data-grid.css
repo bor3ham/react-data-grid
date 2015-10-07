@@ -57,7 +57,7 @@
   border-color: #e7eaec;
   border-image: none;
   border-style: solid solid none;
-  border-width: 1px;yy
+  border-width: 1px;
   clear : both;
 }
 
@@ -301,7 +301,6 @@ input.react-grid-CheckBox {
   height: 40px;
   width: 40px;
 }
-
 .react-autocomplete-Autocomplete__search {
   display: block;
   width: 100%;
