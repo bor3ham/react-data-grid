@@ -38,31 +38,35 @@ var columns = [
   key: 'id',
   name: 'ID',
   width: 80,
-  filterable: true
+  filterable: true,
+  filterKey: 'filter_id'
 },
 {
   key: 'task',
   name: 'Title',
   sortable : true,
-  filterable: true
+  filterable: true,
+  filterKey: 'filter_task'
 },
 {
   key: 'priority',
   name: 'Priority',
   sortable : true,
-  filterable: true
+  filterable: true,
+  filterKey: 'filter_priority'
 },
 {
   key: 'issueType',
   name: 'Issue Type',
   sortable : true,
-  filterable: true
+  filterable: true,
+  filterKey: 'filter_issueType'
 },
 {
   key: 'complete',
   name: '% Complete',
   sortable : true,
-  filterable: true
+  filterable: false
 },
 {
   key: 'startDate',
