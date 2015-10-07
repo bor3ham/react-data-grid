@@ -62,12 +62,12 @@ var columns = [
   filterable: true,
   filterKey: 'filter_issueType'
 },
-// {
-//   key: 'complete',
-//   name: '% Complete',
-//   sortable : true,
-//   filterable: false
-// },
+{
+  key: 'complete',
+  name: '% Complete',
+  sortable : true,
+  filterable: false
+},
 {
   key: 'startDate',
   name: 'Start Date',
@@ -103,7 +103,7 @@ var Example = React.createClass({
         rowGetter={this.rowGetter}
         rowsCount={this.state.rows.length}
         minHeight={500}
-        toolbar={<Toolbar enableFilter={true}/>}/>
+        toolbar={<Toolbar enableFilter={true} onToggleFilter={function() {}} numberOfRows={1} />}/>
     )
   }
 
