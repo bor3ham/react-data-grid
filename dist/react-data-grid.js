@@ -5062,14 +5062,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.props.onChange({ filterTerm: val, columnKey: this.props.column.key });
 	  },
 
-	  componentDidUpdate: function componentDidUpdate(nextProps) {
-	    var ele = React.findDOMNode(this);
-	    if (ele) {
-	      var input = ele.getElementsByTagName('input')[0];
-	      if (input) input.focus();
-	    }
-	  },
-
 	  render: function render() {
 	    return React.createElement(
 	      'div',
