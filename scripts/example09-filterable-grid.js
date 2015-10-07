@@ -37,7 +37,8 @@ var columns = [
 {
   key: 'id',
   name: 'ID',
-  width: 80
+  width: 80,
+  filterable: false
 },
 {
   key: 'task',
