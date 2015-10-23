@@ -4,4 +4,4 @@ lib
 **/build
 test/reports
 test/coverage
-dist
+
