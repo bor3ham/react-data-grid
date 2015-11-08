@@ -61,7 +61,7 @@ var HeaderRow = React.createClass({
   },
 
   getHeaderRenderer(column){
-    if (column.sortable) {
+    if (column.sortable && !this.props.headerCellRenderer) {
       var sortDirection = (this.props.sortColumn === column.key) ? this.props.sortDirection : DEFINE_SORT.NONE;
       return <SortableHeaderCell columnKey={column.key} onSort={this.props.onSort} sortDirection={sortDirection}/>;
     }else{
